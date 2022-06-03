@@ -9,11 +9,7 @@
 #include "system.h"
 #include "linux_parser.h"
 
-using std::set;
-using std::size_t;
-using std::string;
-using std::vector;
-
+using namespace std;
 using namespace LinuxParser;
 
 
@@ -29,8 +25,7 @@ vector<Process>& System::Processes()
   vector<Process> allProcesses{};
   vector<int> processIds = LinuxParser::Pids();
   for (int i : processIds) {
-    Process pro{i};
-    allProcesses.push_back(pro);
+    allProcesses.push_back(i);
   }
     std::sort(allProcesses.begin(), allProcesses.end(),[]( Process& pa,  Process& pb) { return (pb.CpuUtilization() < pa.CpuUtilization()); });
   processes_ = allProcesses;

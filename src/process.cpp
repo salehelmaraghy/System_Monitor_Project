@@ -15,7 +15,7 @@ Process::Process(int Pid) : pid_(Pid) {}
 
 int Process::Pid() { return pid_; }
 
-float Process::CpuUtilization() 
+float Process::CpuUtilization () 
 { 
     std::map <std::string,long> cpuProcess;
     float total_time,seconds,cpu_usage;
@@ -23,7 +23,7 @@ float Process::CpuUtilization()
     total_time = cpuProcess["utime"] + cpuProcess["stime"];
     total_time = total_time+ cpuProcess["cutime"] + cpuProcess["cstime"];
     seconds = LinuxParser::UpTime() - ( cpuProcess["starttime"] /  cpuProcess["sHertz"]);
-    cpu_usage = 100 * ((total_time / cpuProcess["sHertz"]) / seconds);
+    cpu_usage =  ((total_time / cpuProcess["sHertz"]) / seconds);
 
     return cpu_usage; 
  }
@@ -36,6 +36,11 @@ string Process::User() { return LinuxParser::User(Pid());}
 
 long int Process::UpTime() { return LinuxParser::UpTime(Pid()); }
 
-// TODO: Overload the "less than" comparison operator for Process objects
-// REMOVE: [[maybe_unused]] once you define the function
-bool Process::operator<(Process const& a[[maybe_unused]]) const { return true; }
+bool Process::operator<(Process & a)
+{ 
+    return (CpuUtilization()<a.CpuUtilization()) ; 
+}
+
+bool Process::operator>(Process & a) {
+  return CpuUtilization() > a.CpuUtilization();
+}

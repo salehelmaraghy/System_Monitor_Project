@@ -7,18 +7,20 @@ using std::string;
 
 
 Processor::Processor():prevIdle(0),prevNonIdle(0),prevTotal(0){};
-float Processor::Utilization()
+
+
+ float Processor::Utilization()
  {
 
     std::map<std::string,long> processorMap =  LinuxParser::CpuUtilization();
-     float CPU_Percentage;
-     long idle,nonIdle,total,totald,idled;
+     float CPU_Percentage,idled,totald;
+     long idle,nonIdle,total;
      idle = processorMap["idle"]+  processorMap["iowait"];
-     nonIdle =  processorMap["user"]+ processorMap["nice"]+processorMap["system"]+processorMap["irq"]+processorMap["softirq"]+processorMap["steal"];
-     
-
+	 
+     nonIdle =  processorMap["user"]+ processorMap["nice"]+processorMap["system"]+processorMap["irq"]+processorMap["softirq"]+processorMap["steal"] + processorMap["IOwait"] ;
 
      total = processorMap["idle"] + nonIdle;
+	 
      totald = total - prevTotal;
      idled = idle - prevIdle;
 

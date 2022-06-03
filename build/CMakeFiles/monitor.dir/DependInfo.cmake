@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/workspace/Saleh/CppND-System-Monitor/src/format.cpp" "/home/workspace/Saleh/CppND-System-Monitor/build/CMakeFiles/monitor.dir/src/format.cpp.o"
-  "/home/workspace/Saleh/CppND-System-Monitor/src/linux_parser.cpp" "/home/workspace/Saleh/CppND-System-Monitor/build/CMakeFiles/monitor.dir/src/linux_parser.cpp.o"
-  "/home/workspace/Saleh/CppND-System-Monitor/src/main.cpp" "/home/workspace/Saleh/CppND-System-Monitor/build/CMakeFiles/monitor.dir/src/main.cpp.o"
-  "/home/workspace/Saleh/CppND-System-Monitor/src/ncurses_display.cpp" "/home/workspace/Saleh/CppND-System-Monitor/build/CMakeFiles/monitor.dir/src/ncurses_display.cpp.o"
-  "/home/workspace/Saleh/CppND-System-Monitor/src/process.cpp" "/home/workspace/Saleh/CppND-System-Monitor/build/CMakeFiles/monitor.dir/src/process.cpp.o"
-  "/home/workspace/Saleh/CppND-System-Monitor/src/processor.cpp" "/home/workspace/Saleh/CppND-System-Monitor/build/CMakeFiles/monitor.dir/src/processor.cpp.o"
-  "/home/workspace/Saleh/CppND-System-Monitor/src/system.cpp" "/home/workspace/Saleh/CppND-System-Monitor/build/CMakeFiles/monitor.dir/src/system.cpp.o"
+  "/home/workspace/Saleh_2/src/format.cpp" "/home/workspace/Saleh_2/build/CMakeFiles/monitor.dir/src/format.cpp.o"
+  "/home/workspace/Saleh_2/src/linux_parser.cpp" "/home/workspace/Saleh_2/build/CMakeFiles/monitor.dir/src/linux_parser.cpp.o"
+  "/home/workspace/Saleh_2/src/main.cpp" "/home/workspace/Saleh_2/build/CMakeFiles/monitor.dir/src/main.cpp.o"
+  "/home/workspace/Saleh_2/src/ncurses_display.cpp" "/home/workspace/Saleh_2/build/CMakeFiles/monitor.dir/src/ncurses_display.cpp.o"
+  "/home/workspace/Saleh_2/src/process.cpp" "/home/workspace/Saleh_2/build/CMakeFiles/monitor.dir/src/process.cpp.o"
+  "/home/workspace/Saleh_2/src/processor.cpp" "/home/workspace/Saleh_2/build/CMakeFiles/monitor.dir/src/processor.cpp.o"
+  "/home/workspace/Saleh_2/src/system.cpp" "/home/workspace/Saleh_2/build/CMakeFiles/monitor.dir/src/system.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
